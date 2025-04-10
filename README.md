@@ -1,12 +1,33 @@
-# React + Vite
+Este repositório contém o backend e o frontend. Siga as instruções abaixo para configurar e executar o projeto localmente.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Backend
 
-Currently, two official plugins are available:
+### Usando Docker
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Se o Docker estiver instalado, execute o seguinte comando na raiz do projeto para subir o banco de dados:
 
-## Expanding the ESLint configuration
+docker compose up -d
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Usando banco de dados próprio
+
+Se preferir utilizar um banco de dados já existente, edite o arquivo `.env` localizado na pasta `backend` com as credenciais do seu banco.
+
+### Executando o backend
+
+Acesse a pasta `backend` e execute os comandos:
+
+npm install  
+npm run db:migrate  
+npm run start
+
+## Frontend
+
+Acesse a pasta `frontend` e execute os comandos:
+
+npm install  
+npm run start
+
+## Pré-requisitos
+
+- Node.js (versão 16 ou superior)  
+- Docker e Docker Compose (caso utilize o banco de dados via container)
